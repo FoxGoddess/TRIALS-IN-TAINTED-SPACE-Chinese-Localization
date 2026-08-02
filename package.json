@@ -1,0 +1,33 @@
+{
+  "name": "tits",
+  "version": "0.9.161",
+  "description": "TiTS but actually its html and also in electron.",
+  "homepage": "https://www.fenoxo.com",
+  "main": "main.js",
+  "author": "",
+  "license": "UNLICENSED",
+  "buildKey": {
+    "appId": "com.fenoxo.tits",
+    "productName": "TiTS",
+    "artifactName": "${productName}-public-0.9.161-${os}.${ext}",
+    "copyright": "Copyright © OXO Industries",
+    "asar": false,
+    "afterSign": "../electron/notarize-mac.js",
+    "win": {
+      "target": "zip",
+      "icon": "resources/icons/android-chrome-256x256.ico"
+    },
+    "linux": {
+      "target": "tar.gz",
+      "icon": "resources/icons/android-chrome-512x512.png"
+    },
+    "mac": {
+      "hardenedRuntime": true,
+      "category": "public.app-category.role-playing-games",
+      "icon": "resources/icons/android-chrome-512x512.png",
+      "target": [
+        "dmg"
+      ]
+    }
+  }
+}

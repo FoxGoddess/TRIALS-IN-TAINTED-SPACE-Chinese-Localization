@@ -1,0 +1,21 @@
+{
+    "name": "Trials in Tainted Space",
+    "short_name": "TiTS",
+    "description": "In space, no one can hear you cum...",
+    "start_url": "/?homescreen=1",
+    "icons": [
+        {
+            "src": "android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#333E52",
+    "background_color": "#3D5174",
+    "display": "standalone"
+}

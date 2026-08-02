@@ -1,0 +1,84 @@
+<!doctype html><html lang="en"><head><title>Trials in Tainted Space</title><link rel="preload" href="resources/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin/><link rel="preload" href="resources/Lato-Bold.woff2" as="font" type="font/woff2" crossorigin/><link rel="preload" href="resources/Lato-Black.woff2" as="font" type="font/woff2" crossorigin/><link rel="preload" href="resources/Univers-UltraCondensed.woff2" as="font" type="font/woff2" crossorigin/><link rel="preload" href="resources/components/logo_00@2x.png" as="image"/><link rel="icon" href="./resources/icons/favicon.ico"/><link rel="icon" type="image/png" sizes="16x16" href="./resources/icons/favicon-16x16.png"/><link rel="icon" type="image/png" sizes="32x32" href="./resources/icons/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="64x64" href="./resources/icons/favicon.png"/><link rel="icon" type="image/png" sizes="192x192" href="./resources/icons/android-chrome-192x192.png"/><link rel="icon" type="image/png" sizes="512x512" href="./resources/icons/android-chrome-512x512.png"/><link rel="apple-touch-icon" sizes="180x180" href="./resources/icons/apple-touch-icon.png"/><link rel="manifest" href="./resources/icons/site.webmanifest"/><link rel="mask-icon" href="./resources/icons/safari-pinned-tab.svg" color="#8d31b0"/><meta name="msapplication-TileColor" content="#8d31b0"/><meta name="theme-color" content="#8d31b0"/><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/><meta name="apple-mobile-web-app-title" content="TiTS"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black"/><meta name="apple-touch-icon" href="./resources/icons/favicon.png"/><meta name="apple-touch-icon" sizes="76x76" href="./resources/icons/android-chrome-72x72.png"/><meta name="apple-touch-icon" sizes="120x120" href="./resources/icons/android-chrome-144x144.png"/><meta name="apple-touch-icon" sizes="152x152" href="./resources/icons/android-chrome-144x144.png"/><meta charset="utf-8"/><meta name="keywords" content="trials in tainted space, tainted space, tits, fenoxo"/><meta name="description" content="Blast off into the stars to chase your inheritance, meet new faces and create your very own adventure."/><meta name="author" content="Fenoxo"/><meta property="og:title" content="Trials in Tainted Space"/><meta property="og:site_name" content="fenoxo.com"/><meta property="og:description" content="In space, no one can hear you cum..."/><meta property="og:image" content="https://www.fenoxo.com/play/TiTS/release/resources/components/thumbnail.png"/><meta property="og:url" content="https://www.fenoxo.com/play/TiTS/release/index.html"/><style>body { margin: 0 }
+		#loading { background: #3D5174; width: 100%; height: 100%; position: absolute; text-align: center; display: flex; justify-content: center; align-content: center; flex-direction: column; }
+		#loading img { max-height: 90%; max-width: 100%; margin: 0 auto; top:0; display: block; }
+		#progbar { width: 54%; margin: 0 auto; border-style: solid; border-color: #8D31B0; }
+		#progval { background-color: #8D31B0; height: 2vh; width: 0; }
+		#progfile { color: #FFF; font-family: "Trebuchet MS", "Verdana", sans-serif; }
+		.disable-transitions-preload { -webkit-transition: none !important; -moz-transition: none !important; -ms-transition: none !important; -o-transition: none !important; transition: none !important; }</style><base href="tits://titsapp"><script defer="defer" src="./runtime.fcc2482e.js"></script><script defer="defer" src="./vendors.e943d044.js"></script><script defer="defer" src="./main.93039f77.js"></script></head><body class="disable-transitions-preload"><div id="app"></div><div id="loading"><img id="loadimg" style="max-height: 80%" src="resources/steele_tech_emblem.svg"/><div id="progbar"><div id="progval">&nbsp;</div></div><br><div id="progfile">Loading modules...</div></div><script id="load_script">{
+			if (navigator?.splashscreen?.hide)
+			{
+				navigator.splashscreen.hide();
+			}
+
+			let elemTarget = document.getElementById("loading");
+			if (elemTarget)
+			{
+				function loadCheckDate(day, month, dayRange)
+				{
+					// milliseconds in a day
+					const msd = 86400000;
+
+					const curDate = new Date();
+					let tarDate = new Date();
+
+					tarDate.setFullYear(curDate.getFullYear());
+					tarDate.setMonth(month - 1);
+					tarDate.setDate(day);
+
+					let minBound = tarDate.getTime();
+					minBound -= (msd * dayRange);
+
+					let maxBound = tarDate.getTime();
+					maxBound += (msd * dayRange);
+
+					if ((curDate.getTime() >= minBound) && (curDate.getTime() <= maxBound)) return true;
+					return false;
+				}
+
+				// April Fools or Goblinization Day
+				if (loadCheckDate(1, 4, 1) || loadCheckDate(30, 4, 1))
+				{
+					elemTarget.style.background = `#3D6774`;
+					elemTarget = document.getElementById("progbar");
+					if (elemTarget) elemTarget.style.borderColor = `#7A22A7`;
+					elemTarget = document.getElementById("progval");
+					if (elemTarget) elemTarget.style.backgroundColor = `#7A22A7`;
+					elemTarget = document.getElementById("loadimg");
+					if (elemTarget) elemTarget.src = `resources/tamani_logo.svg`;
+				}
+				// Earth Day
+				else if (loadCheckDate(22, 4, 3))
+				{
+					elemTarget = document.getElementById("loadimg");
+					if (elemTarget) elemTarget.src = `resources/tsc_emblem.svg`;
+				}
+				// Mayturnity
+				else if (loadCheckDate(12, 5, 6))
+				{
+					elemTarget = document.getElementById("loadimg");
+					if (elemTarget) elemTarget.src = `resources/tamani_logo.svg`;
+				}
+				// Halloween
+				else if (loadCheckDate(16, 10, 15))
+				{
+					elemTarget.style.background = `#120E17`;
+					elemTarget = document.getElementById("progbar");
+					if (elemTarget) elemTarget.style.borderColor = `#C54E1E`;
+					elemTarget = document.getElementById("progval");
+					if (elemTarget) elemTarget.style.backgroundColor = `#C54E1E`;
+					elemTarget = document.getElementById("loadimg");
+					if (elemTarget) elemTarget.src = `resources/steele_tech_emblem.svg`;
+				}
+				// X-Mas
+				else if (loadCheckDate(24, 12, 6))
+				{
+					elemTarget.style.background = `#03280F`;
+					elemTarget = document.getElementById("progbar");
+					if (elemTarget) elemTarget.style.borderColor = `#780017`;
+					elemTarget = document.getElementById("progval");
+					if (elemTarget) elemTarget.style.backgroundColor = `#780017`;
+					elemTarget = document.getElementById("loadimg");
+					if (elemTarget) elemTarget.src = `resources/steele_tech_emblem.svg`;
+				}
+			}
+		}</script></body></html>
